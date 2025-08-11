@@ -3,91 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Project 3 - AWS Static Website Hosting</title>
+    <title>Static Website - DevOps Learning Project on AWS</title>
+    <meta name="description" content="A static HTML/CSS site hosted on AWS S3 + CloudFront with automated GitHub Actions CI/CD">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Project 3: Host a Static Website Using Amazon S3 + CloudFront + SSL</h1>
-            <p class="project-subtitle">Learn serverless hosting with caching, domain setup, and SSL — all free</p>
-        </header>
+<body class="dark-theme">
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Static Website – DevOps Learning Project on AWS ☁️🚀</h1>
+            <h2 class="hero-subtitle">Hosting a static HTML/CSS site using AWS S3 + CloudFront, fully automated via GitHub Actions CI/CD</h2>
+            <p class="hero-description">
+                The goal was to explore serverless architecture, use a global CDN, and automate deployments — all within AWS free-tier services.
+            </p>
+        </div>
+    </header>
 
-        <main>
-            <section class="goal-section">
-                <h2>🎯 Project Goal</h2>
-                <p>Master serverless hosting with caching, domain setup, and SSL configuration using AWS services at no cost.</p>
-            </section>
-
-            <section class="learning-section">
-                <h2>🔧 What You'll Learn</h2>
-                <ul class="learning-list">
-                    <li>
-                        <span class="topic">Hosting static sites on S3</span>
-                        <span class="description">Deploy static HTML and CSS files</span>
-                    </li>
-                    <li>
-                        <span class="topic">Configuring CloudFront as CDN</span>
-                        <span class="description">Utilize AWS Free tier for content delivery</span>
-                    </li>
-                    <li>
-                        <span class="topic">Enabling HTTPS using AWS Certificate Manager</span>
-                        <span class="description">Secure your website with SSL certificates</span>
-                    </li>
-                    <li>
-                        <span class="topic">Using a custom domain</span>
-                        <span class="description">Connect free domains from Freenom or Dot.tk</span>
-                    </li>
+    <main>
+        <section class="project-goal">
+            <div class="container">
+                <h2>📌 Project Goal</h2>
+                <ul>
+                    <li>Host a static website (HTML + CSS)</li>
+                    <li>Enable HTTPS using AWS CloudFront</li>
+                    <li>Learn about CDN and caching behavior</li>
+                    <li>Automate deployments using GitHub Actions</li>
                 </ul>
-            </section>
+            </div>
+        </section>
 
-            <section class="skills-section">
-                <h2>🔗 Skills Covered</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>AWS S3</h3>
-                        <p>Static website hosting</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>CloudFront</h3>
-                        <p>Content Delivery Network</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>SSL Certificates</h3>
-                        <p>HTTPS implementation</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Domain & DNS</h3>
-                        <p>Custom domain configuration</p>
-                    </div>
-                </div>
-            </section>
+        <section class="project-summary">
+            <div class="container">
+                <h2>Project Summary</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>App</td>
+                            <td>Static Website (HTML, CSS)</td>
+                        </tr>
+                        <tr>
+                            <td>Host</td>
+                            <td>AWS S3 (Static Website Hosting)</td>
+                        </tr>
+                        <tr>
+                            <td>CDN</td>
+                            <td>AWS CloudFront (HTTPS + Caching)</td>
+                        </tr>
+                        <tr>
+                            <td>Deployment</td>
+                            <td>Automated with GitHub Actions</td>
+                        </tr>
+                        <tr>
+                            <td>Access Control</td>
+                            <td>IAM user + GitHub Secrets</td>
+                        </tr>
+                        <tr>
+                            <td>CI/CD Flow</td>
+                            <td>Push to GitHub → Deploy to S3 + Invalidate CDN</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-            <section class="contact-section">
-                <h2>👤 Connect With Me</h2>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/your-profile" target="_blank" class="social-link linkedin">
-                        <span class="icon">💼</span>
-                        <span class="text">LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/your-username" target="_blank" class="social-link github">
-                        <span class="icon">💻</span>
-                        <span class="text">GitHub</span>
-                    </a>
-                    <a href="https://your-portfolio.com" target="_blank" class="social-link portfolio">
-                        <span class="icon">🌐</span>
-                        <span class="text">Portfolio</span>
+        <section class="devops-journey">
+            <div class="container">
+                <h2>📚 Phase-by-Phase DevOps Journey</h2>
+                
+                <h3>Phase 1 – Setup and Hosting with S3</h3>
+                <ul>
+                    <li>Create an AWS S3 bucket</li>
+                    <li>Enable static website hosting</li>
+                    <li>Configure bucket permissions</li>
+                    <li>Upload HTML and CSS files</li>
+                    <li>Test the S3 website endpoint</li>
+                </ul>
 
+                <h3>Phase 2 – Global Delivery with CloudFront</h3>
+                <ul>
+                    <li>Create a CloudFront distribution</li>
+                    <li>Configure S3 bucket as origin</li>
+                    <li>Enable HTTPS with SSL certificate</li>
+                    <li>Set up caching behaviors</li>
+                    <li>Test global CDN performance</li>
+                </ul>
 
-                        <h1>test for action work test again</h1>
-                    </a>
-                </div>
-            </section>
-        </main>
+                <h3>Phase 3 – CI/CD with GitHub Actions</h3>
+                <ul>
+                    <li>Create IAM user with S3 and CloudFront permissions</li>
+                    <li>Configure GitHub repository secrets</li>
+                    <li>Write GitHub Actions workflow YAML</li>
+                    <li>Set up automated S3 deployment</li>
+                    <li>Implement CloudFront cache invalidation</li>
+                </ul>
+            </div>
+        </section>
 
-        <footer>
-            <p>&copy; 2024 DevOps Learning Project</p>
-        </footer>
-    </div>
+        <section class="repository-files">
+            <div class="container">
+                <h2>📁 Repository Files</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>File / Folder</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>index.html</td>
+                            <td>Website homepage</td>
+                        </tr>
+                        <tr>
+                            <td>styles.css</td>
+                            <td>CSS styling</td>
+                        </tr>
+                        <tr>
+                            <td>.github/workflows/</td>
+                            <td>Contains GitHub Actions CI/CD YAML file</td>
+                        </tr>
+                        <tr>
+                            <td>deploy.yml</td>
+                            <td>Automates S3 upload and CloudFront invalidation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="devops-tools">
+            <div class="container">
+                <h2>📌 DevOps Tools and Skills Practiced</h2>
+                <ul>
+                    <li>AWS S3 – static website hosting</li>
+                    <li>CloudFront – CDN for global delivery + HTTPS</li>
+                    <li>GitHub Actions – CI/CD automation pipeline</li>
+                    <li>IAM – secure access control using policies</li>
+                    <li>AWS CLI – used in GitHub Actions to deploy + invalidate CDN</li>
+                    <li>Secrets Management – GitHub Secrets for credentials</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="security-considerations">
+            <div class="container">
+                <h2>🔒 Security Considerations</h2>
+                <ul>
+                    <li>Used IAM user with limited permissions (S3 + CloudFront only)</li>
+                    <li>Stored all AWS credentials securely in GitHub Secrets</li>
+                    <li>Avoided hardcoding keys or region in code</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Project by Mahesh Abekoon • © 2025</p>
+            <div class="social-links">
+                <a href="https://github.com/maheshpradeep" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/mahesh-abekoon-43457b202/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

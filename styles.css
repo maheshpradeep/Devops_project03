@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +7,10 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #F1F1F1;
+    background-color: #121212;
     min-height: 100vh;
 }
 
@@ -16,126 +18,158 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
 }
 
-header {
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #00ADB5 0%, #393E46 50%, #222831 100%);
+    padding: 4rem 0;
     text-align: center;
-    padding: 2rem 0;
-    border-bottom: 3px solid #667eea;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
-header h1 {
-    color: #2c3e50;
-    font-size: 2.2rem;
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 1rem;
+    color: #F1F1F1;
 }
 
-.project-subtitle {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-    font-style: italic;
+.hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #EEEEEE;
 }
 
+.hero-description {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #CCCCCC;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sections */
 section {
-    margin: 2.5rem 0;
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-radius: 10px;
-    border-left: 5px solid #667eea;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #1E1E1E;
+    border-radius: 12px;
+    border-left: 4px solid #00ADB5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-    color: #2c3e50;
+    color: #00ADB5;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
+    font-weight: 600;
 }
 
-.goal-section p {
-    font-size: 1.1rem;
-    color: #555;
+h3 {
+    color: #F1F1F1;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 500;
 }
 
-.learning-list {
+/* Lists */
+ul {
     list-style: none;
+    padding-left: 0;
 }
 
-.learning-list li {
-    margin: 1rem 0;
-    padding: 1rem;
-    background: white;
+ul li {
+    margin: 0.8rem 0;
+    padding: 0.8rem 1rem;
+    background: #2A2A2A;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
+    border-left: 3px solid #00ADB5;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.topic {
+ul li:hover {
+    background: #333333;
+    transform: translateX(5px);
+}
+
+ul li::before {
+    content: "▶";
+    color: #00ADB5;
     font-weight: bold;
-    color: #667eea;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    margin-right: 10px;
 }
 
-.description {
-    color: #666;
-    font-size: 0.95rem;
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: #2A2A2A;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+thead {
+    background: #00ADB5;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    color: #121212;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+td {
+    color: #F1F1F1;
+    font-weight: 400;
+}
+
+tbody tr:hover {
+    background: #333333;
+    transition: background 0.3s ease;
+}
+
+/* Live URL Link */
+.live-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #00ADB5, #393E46);
+    color: #F1F1F1;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
     margin-top: 1rem;
 }
 
-.skill-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.live-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 173, 181, 0.3);
+    background: linear-gradient(135deg, #393E46, #00ADB5);
 }
 
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.skill-card h3 {
-    color: #667eea;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.skill-card p {
-    color: #666;
-    font-size: 0.9rem;
-}
-
+/* Footer */
 footer {
+    background: #1E1E1E;
+    padding: 3rem 0;
+    border-top: 3px solid #00ADB5;
+    margin-top: 4rem;
     text-align: center;
-    padding: 2rem 0;
-    border-top: 1px solid #ddd;
-    margin-top: 2rem;
-    color: #7f8c8d;
 }
 
-.contact-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-left: 5px solid #fff;
-}
-
-.contact-section h2 {
-    color: white;
-    text-align: center;
+footer p {
+    color: #CCCCCC;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .social-links {
@@ -149,47 +183,56 @@ footer {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    padding: 0.8rem 1.5rem;
+    background: #2A2A2A;
+    color: #F1F1F1;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 8px;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid transparent;
 }
 
 .social-link:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: #00ADB5;
+    color: #121212;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 173, 181, 0.3);
+    border-color: #00ADB5;
 }
 
-.social-link .icon {
+.social-link i {
     font-size: 1.2rem;
 }
 
-.social-link .text {
-    font-weight: 600;
-    font-size: 1rem;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        margin: 1rem;
         padding: 15px;
     }
     
-    header h1 {
-        font-size: 1.8rem;
+    .hero-title {
+        font-size: 2rem;
     }
     
-    .project-subtitle {
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
         font-size: 1rem;
     }
     
-    .skills-grid {
-        grid-template-columns: 1fr;
+    section {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
     }
     
     .social-links {
@@ -201,5 +244,36 @@ footer {
     .social-link {
         width: 200px;
         justify-content: center;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 0.8rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .hero-title {
+        font-size: 1.7rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    .live-link {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
