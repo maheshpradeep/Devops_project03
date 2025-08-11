@@ -88,3 +88,10 @@ The goal was to understand **serverless architecture**, use a **global CDN (Clou
 
 ---
 
+## 📌 Next Steps
+
+- Add custom domain with Freenom / Route 53  
+- Attach SSL using AWS Certificate Manager (ACM)  
+- Automate entire infrastructure using **Terraform** in future projects  
+
+---
